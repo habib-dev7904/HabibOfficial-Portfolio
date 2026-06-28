@@ -18,9 +18,9 @@ icon:"⚡"
 },
 
 {
-number:"1+",
-title:"Years Learning",
-icon:"📚"
+number:"15",
+title:"Years old",
+icob: "🎂"
 },
 
 {

@@ -28,7 +28,7 @@ github:"https://github.com/habib-dev7904/prep-wise_ai",
 title:"Ecommerce Website",
 
 description:
-"Full stack social platform with authentication, posts, likes and comments.",
+"Full stack Ecommerce with Login and Signup Page.",
 
 tech:
 "React • Node.js • Express • MongoDB",
