@@ -20,7 +20,7 @@ icon:"⚡"
 {
 number:"15",
 title:"Years old",
-icob: "🎂"
+icon: "🎂"
 },
 
 {
