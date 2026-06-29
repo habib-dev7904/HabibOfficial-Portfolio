@@ -219,7 +219,7 @@ Skills
 
 <div>
 <h3 className="text-3xl font-bold">
-15
+14
 </h3>
 <p className="text-gray-400">
 Years old
