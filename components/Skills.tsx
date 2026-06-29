@@ -1,68 +1,70 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  SiHtml5,
+  SiCss,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiExpress,
+  SiMysql,
+  SiSupabase,
+  SiGit,
+  SiGithub,
+  SiNpm,
+} from "react-icons/si";
 
 
-const skills = [
+import {
+  MdCode
+} from "react-icons/md";
+
+const skillGroups = [
 
 {
-  name:"JavaScript",
-  icon:"JS"
+  title:"Frontend Development",
+  skills:[
+    {name:"HTML5", icon:SiHtml5},
+    {name:"CSS3", icon:SiCss},
+    {name:"JavaScript", icon:SiJavascript},
+    {name:"React.js", icon:SiReact},
+    {name:"Next.js", icon:SiNextdotjs},
+    {name:"Tailwind CSS", icon:SiTailwindcss},
+  ]
 },
 
-{
-  name:"TypeScript",
-  icon:"TS"
-},
 
 {
-  name:"React",
-  icon:"⚛️"
+  title:"Backend Development",
+  skills:[
+    {name:"Node.js", icon:SiNodedotjs},
+    {name:"Express.js", icon:SiExpress},
+    {name:"Next.js", icon:SiNextdotjs},
+  ]
 },
 
-{
-  name:"Next.js",
-  icon:"▲"
-},
 
 {
-  name:"Node.js",
-  icon:"🟢"
+  title:"Database",
+  skills:[
+    {name:"MySQL", icon:SiMysql},
+    {name:"SQL", icon:SiMysql},
+    {name:"Supabase", icon:SiSupabase},
+  ]
 },
 
-{
-  name:"Express",
-  icon:"EX"
-},
 
 {
-  name:"MongoDB",
-  icon:"🍃"
-},
-
-{
-  name:"Supabase",
-  icon:"⚡"
-},
-
-{
-  name:"Tailwind CSS",
-  icon:"🎨"
-},
-
-{
-  name:"Git",
-  icon:"🔧"
-},
-
-{
-  name:"GitHub",
-  icon:"🐙"
-},
-
-{
-  name:"AI Tools",
-  icon:"🤖"
+  title:"Tools",
+  skills:[
+    {name:"Git", icon:SiGit},
+    {name:"GitHub", icon:SiGithub},
+    {name:"VS Code", icon:MdCode},
+    {name:"npm", icon:SiNpm},
+  ]
 }
 
 ];
@@ -75,7 +77,6 @@ export default function Skills(){
 return (
 
 <section
-
 id="skills"
 
 className="
@@ -88,14 +89,10 @@ text-white
 >
 
 
-
 <div className="
 max-w-6xl
 mx-auto
-"
->
-
-
+">
 
 
 <motion.div
@@ -124,13 +121,14 @@ mb-14
 
 <p className="
 text-orange-400
-tracking-widest
 uppercase
+tracking-widest
 ">
 
 Skills
 
 </p>
+
 
 
 <h2 className="
@@ -139,16 +137,7 @@ font-bold
 mt-3
 ">
 
-My Tech
-
-<span className="
-text-red-500
-">
-
- Arsenal
-
-</span>
-
+My Tech Stack
 
 </h2>
 
@@ -158,7 +147,7 @@ text-gray-400
 mt-4
 ">
 
-Technologies I use to build modern products
+Technologies I use to build modern applications
 
 </p>
 
@@ -169,48 +158,64 @@ Technologies I use to build modern products
 
 
 
+<div className="space-y-12">
 
 
-<div
+{skillGroups.map((group)=>(
 
-className="
+
+<div key={group.title}>
+
+
+<h3 className="
+text-2xl
+font-bold
+mb-6
+text-orange-400
+">
+
+{group.title}
+
+</h3>
+
+
+
+<div className="
 grid
 grid-cols-2
 md:grid-cols-4
 gap-6
-"
-
->
+">
 
 
-{skills.map((skill,index)=>(
+{group.skills.map((skill,index)=>{
 
+
+const Icon = skill.icon;
+
+
+return (
 
 <motion.div
 
-
 key={skill.name}
-
 
 initial={{
 opacity:0,
-scale:0.7
+scale:0.8
 }}
-
 
 whileInView={{
 opacity:1,
 scale:1
 }}
 
-
 viewport={{
 once:true
 }}
 
-
 transition={{
-delay:index*0.08
+delay:index*0.1
 }}
 
 
@@ -220,54 +225,74 @@ scale:1.05
 }}
 
 
+
 className="
 bg-white/5
 backdrop-blur-xl
-rounded-2xl
+rounded-3xl
 p-6
+
 border
 border-white/10
-text-center
+
+shadow-xl
+shadow-orange-500/20
+
+hover:border-orange-500
+hover:shadow-orange-500/60
+
+transition-all
+duration-300
 "
 
 
 >
-
 
 
 <div className="
-text-4xl
+flex
+justify-center
 mb-4
-"
->
+text-orange-400
+">
 
-{skill.icon}
+<Icon size={42}/>
 
 </div>
 
 
 
-<h3 className="
+<p className="
+text-center
 font-semibold
-text-gray-200
 ">
 
 {skill.name}
 
-</h3>
+</p>
 
 
 
 </motion.div>
 
 
-))}
+)
+
+
+})}
+
+
+</div>
 
 
 
 </div>
 
 
+))}
+
+
+</div>
 
 
 
@@ -276,8 +301,6 @@ text-gray-200
 
 </section>
 
-
 )
-
 
 }

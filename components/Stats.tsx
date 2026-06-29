@@ -18,15 +18,15 @@ icon:"⚡"
 },
 
 {
-number:"15",
+number:"14",
 title:"Years old",
 icon: "🎂"
 },
 
 {
-number:"100%",
-title:"Dedication",
-icon:"🔥"
+number:"8ᵗʰ",
+title:"Grade",
+icon:"🎓"
 }
 
 ];
