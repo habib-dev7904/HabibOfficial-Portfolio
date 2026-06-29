@@ -15,6 +15,7 @@ import {
   SiGit,
   SiGithub,
   SiNpm,
+  SiMongodb,
 } from "react-icons/si";
 
 
@@ -51,7 +52,7 @@ const skillGroups = [
   title:"Database",
   skills:[
     {name:"MySQL", icon:SiMysql},
-    {name:"SQL", icon:SiMysql},
+    {name:"MongoDB", icon:SiMongodb},
     {name:"Supabase", icon:SiSupabase},
   ]
 },
