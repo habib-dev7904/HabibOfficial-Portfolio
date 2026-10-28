@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 
 const stats = [
 
-{
-number:"5+",
-title:"Projects Built",
-icon:"🚀"
-},
+// {
+// number:"5+",
+// title:"Projects Built",
+// icon:"🚀"
+// },
 
 {
 number:"10+",
@@ -18,13 +18,13 @@ icon:"⚡"
 },
 
 {
-number:"14",
+number:"15",
 title:"Years old",
 icon: "🎂"
 },
 
 {
-number:"8ᵗʰ",
+number:"9ᵗʰ",
 title:"Grade",
 icon:"🎓"
 }

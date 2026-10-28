@@ -117,7 +117,7 @@ max-w-xl
 "
 >
 
-I'm Habib Mohammed, a Full Stack Developer
+I'm Habib Mohammed, a Developer and Startup Builder
 creating modern web applications,
 AI tools and scalable digital products.
 
@@ -197,14 +197,14 @@ gap-5
 >
 
 
-<div>
+{/* <div>
 <h3 className="text-3xl font-bold">
-5+
+10+
 </h3>
 <p className="text-gray-400">
 Projects
 </p>
-</div>
+</div> */}
 
 
 <div>
@@ -219,7 +219,7 @@ Skills
 
 <div>
 <h3 className="text-3xl font-bold">
-14
+15
 </h3>
 <p className="text-gray-400">
 Years old
